@@ -1,0 +1,42 @@
+<div class="benchmarking-section">
+  <h2>Benchmarking Results</h2>
+  <table class="benchmark-table">
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Confidence (%)</th>
+        <th>Conciseness (Tokens)</th>
+        <th>Response Time (ms)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Weighted Fusion</td>
+        <td>92%</td>
+        <td>150</td>
+        <td>120</td>
+      </tr>
+      <tr>
+        <td>Sequential Fusion</td>
+        <td>89%</td>
+        <td>180</td>
+        <td>140</td>
+      </tr>
+      <tr>
+        <td>Context-Aware Fusion</td>
+        <td>{{accuracy}}</td>
+        <td>130</td>
+        <td>115</td>
+      </tr>
+      <!-- Add more rows based on results -->
+    </tbody>
+  </table>
+</div>
+
+<!-- Button for navigating to the dashboard -->
+<div class="button-container">
+  <button class="navigate-button" (click)="navigateToDashboard()">Go to Dashboard</button>
+</div>
+
+  
+  

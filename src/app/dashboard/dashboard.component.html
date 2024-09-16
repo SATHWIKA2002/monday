@@ -1,0 +1,32 @@
+
+<div class="dashboard-container">
+  <div class="header-container">
+    <h1 class="header-title">AI-DRIVEN RAG FUSION FOR DATA SUMMARIZATION</h1>
+    <button class="go-to-benchmarking-button" (click)="navigateToBenchmarking()">Validation</button>
+  </div>
+
+  <div class="content-container">
+    <div class="button-and-dropdown-container">
+      <div class="dropdown-container">
+        <select class="dropdown-select">
+          <option value="" disabled selected>Select a Fusion</option>
+          <option value="fusion1">Merge Fusion</option>
+          <option value="fusion2">Score Fusion</option>
+        </select>
+      </div>
+    </div>
+    <div class="chat-container">
+      <div class="messages">
+        <div class="message-container">
+          <div *ngFor="let message of messages" class="message" [ngClass]="{'user-message': message.type === 'user', 'bot-message': message.type === 'bot'}">
+            {{ message.text }}
+          </div>
+        </div>
+      </div>
+      <div class="input-container">
+        <input [(ngModel)]="userMessage" placeholder="Type your query..." />
+        <button (click)="sendMessage()">&#8593;</button>
+      </div>
+    </div>
+  </div>
+</div>
